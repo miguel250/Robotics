@@ -17,8 +17,12 @@ public class RobotMap {
     //Victors
     public static final int shooterRight = 5,
                             shooterLeft  = 6,
-                            sweeper      = 7;
+                            sweeper      = 7,
+                            elbow        = 8;
     //Sensors
     public static final int pot         = 1,
                             rangeFinder = 2;
+    
+    //Solenoid
+    public static final int ballStopper = 1;
 }
