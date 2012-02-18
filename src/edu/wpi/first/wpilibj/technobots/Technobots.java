@@ -4,15 +4,14 @@
 /* must be accompanied by the FIRST BSD license file in the root directory of */
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
-
 package edu.wpi.first.wpilibj.technobots;
-
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.technobots.commands.CommandBase;
 import edu.wpi.first.wpilibj.technobots.commands.SweeterOn;
+import edu.wpi.first.wpilibj.Compressor;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -24,6 +23,13 @@ import edu.wpi.first.wpilibj.technobots.commands.SweeterOn;
 public class Technobots extends IterativeRobot {
 
     Command autonomousCommand;
+    Compressor compressor;
+
+    public Technobots() {
+        
+        compressor = new Compressor(3, 1);
+
+    }
 
     /**
      * This function is run when the robot is first started up and should be
@@ -35,6 +41,7 @@ public class Technobots extends IterativeRobot {
 
         // Initialize all subsystems
         CommandBase.init();
+        compressor.start();
     }
 
     public void autonomousInit() {
@@ -50,7 +57,7 @@ public class Technobots extends IterativeRobot {
     }
 
     public void teleopInit() {
-	// This makes sure that the autonomous stops running when
+        // This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
         // this line or comment it out.
