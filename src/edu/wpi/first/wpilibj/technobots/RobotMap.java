@@ -14,7 +14,12 @@ public class RobotMap {
                             upperRight = 3,
                             upperLeft  = 4;
 
-    //Victors
+    /**
+     * Victors
+     * 
+     * Sweeper is reverse
+     * Shooter is reverse
+     */
     public static final int shooterRight = 5,
                             shooterLeft  = 6,
                             sweeper      = 7,
