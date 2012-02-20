@@ -19,6 +19,8 @@ public class DriveTrain extends Subsystem {
 
     public DriveTrain() {
 
+        super("DriveTrain");
+
         motors = new RobotDrive(RobotMap.upperLeft, RobotMap.lowerLeft, RobotMap.upperRight, RobotMap.lowerRight);
 
         motors.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, true);

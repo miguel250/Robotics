@@ -14,8 +14,8 @@ import edu.wpi.first.wpilibj.technobots.subsystems.Shooter;
 public class OI {
 
     Joystick xbox;
-    Button   button1, button2, button3, button5;
-    Shooter  shooter;
+    Button button1, button2, button3, button5;
+    Shooter shooter;
 
     public OI() {
 
@@ -28,13 +28,41 @@ public class OI {
         button1.whenPressed(new SetElbowSetPoint(4));
         button2.whenPressed(new SetElbowSetPoint(2));
         button3.whenPressed(new SetElbowSetPoint(0));
-        
+
         button5.whenPressed(new SweeperOn());
 
-        if (xbox.getRawAxis(3) > 0) {
+        if (Buffer(xbox.getRawAxis(3)) > 0) {
+
             shooter = new Shooter();
 
 
         }
+    }
+
+    public double getMagnitude() {
+
+        return xbox.getMagnitude();
+    }
+
+    public double getDirection() {
+
+        return xbox.getDirectionDegrees();
+    }
+
+    public double getRotation() {
+
+        return Buffer(xbox.getRawAxis(4));
+    }
+
+    private double Buffer(double n) {
+
+        double buffers = 0.2;
+
+        if (Math.abs(n) < buffers) {
+
+            return n;
+        }
+
+        return n;
     }
 }
