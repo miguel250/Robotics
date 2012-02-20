@@ -18,7 +18,7 @@ public class Sweeper extends Subsystem {
      */
     public Sweeper() {
 	super("Sweeper");
-        motor = new Victor(1);
+        motor = new Victor(RobotMap.sweeper);
     }
 
     public void initDefaultCommand() {
