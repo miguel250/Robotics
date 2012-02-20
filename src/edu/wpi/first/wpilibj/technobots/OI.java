@@ -13,10 +13,13 @@ import edu.wpi.first.wpilibj.technobots.commands.SweeperOn;
  */
 public class OI {
 
-    Joystick xbox = new Joystick(1);
-    Button button1 = new  JoystickButton(xbox,1);
+    Joystick xbox;
+    Button button1;
 
     public OI() {
+
+        xbox = new Joystick(1);
+        button1 = new  JoystickButton(xbox,1);
 
         button1.whenPressed(new SweeperOn());
     }

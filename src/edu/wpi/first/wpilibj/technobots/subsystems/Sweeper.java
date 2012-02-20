@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.technobots.RobotMap;
 
 /**
  *
+ * @author Kim
  */
 public class Sweeper extends Subsystem {
 

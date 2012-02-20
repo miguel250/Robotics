@@ -6,10 +6,10 @@ package edu.wpi.first.wpilibj.technobots.commands;
 
 /**
  *
- * @author Admin
+ * @author Kim
  */
 public class SweeperDoNothing extends CommandBase {
-    
+
     public SweeperDoNothing() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
