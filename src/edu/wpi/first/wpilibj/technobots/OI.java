@@ -48,12 +48,12 @@ public class OI {
 
     public double getMagnitude() {
 
-        return xbox.getMagnitude();
+        return Buffer(xbox.getMagnitude());
     }
 
     public double getDirection() {
 
-        return xbox.getDirectionDegrees();
+        return Buffer(xbox.getDirectionDegrees());
     }
 
     public double getRotation() {
