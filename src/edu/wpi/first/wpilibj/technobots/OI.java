@@ -14,14 +14,14 @@ import edu.wpi.first.wpilibj.technobots.commands.SweeperOn;
 public class OI {
 
     Joystick xbox;
-    Button button1;
+    Button button5;
 
     public OI() {
 
         xbox = new Joystick(1);
-        button1 = new  JoystickButton(xbox,1);
+        button5 = new  JoystickButton(xbox,5);
 
-        button1.whenPressed(new SweeperOn());
+        button5.whenPressed(new SweeperOn());
     }
 }
 
