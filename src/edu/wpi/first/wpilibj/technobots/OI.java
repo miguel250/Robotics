@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.DigitalIOButton;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.technobots.commands.SweeperOn;
+import edu.wpi.first.wpilibj.technobots.subsystems.Shooter;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -22,6 +23,11 @@ public class OI {
         button5 = new  JoystickButton(xbox,5);
 
         button5.whenPressed(new SweeperOn());
+        if(xbox.getRawAxis(3) > 0) {
+            Shooter shooter = new Shooter();
+        
+        
     }
-}
-
+    }  
+    
+    }
