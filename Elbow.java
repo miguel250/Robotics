@@ -3,6 +3,8 @@
  * and open the template in the editor.
  */
 
+import edu.wpi.first.wpilibj.AnalogChannel;
+import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
 
 /**
@@ -16,6 +18,9 @@ public class Elbow extends PIDSubsystem {
     private static final double Kd = 0.0;
 
     public static final double START = 4.0;
+    AnalogChannel pot;
+    
+    Victor motor;
     
     // Initialize your subsystem here
     public Elbow() {
