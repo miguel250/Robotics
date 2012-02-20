@@ -4,6 +4,7 @@ package edu.wpi.first.wpilibj.technobots.subsystems;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.technobots.RobotMap;
+import edu.wpi.first.wpilibj.technobots.commands.ShooterDoNothing;
 
 /**
  *
@@ -26,6 +27,8 @@ public class Shooter extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+        
+        setDefaultCommand(new ShooterDoNothing());
     }
 
     public void goForward(){
