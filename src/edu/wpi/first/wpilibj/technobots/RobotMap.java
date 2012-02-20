@@ -8,7 +8,7 @@ package edu.wpi.first.wpilibj.technobots;
  */
 public class RobotMap {
 
-    //Jugars
+    //Jaguars
     public static final int lowerRight = 1,
                             lowerLeft  = 2,
                             upperRight = 3,
