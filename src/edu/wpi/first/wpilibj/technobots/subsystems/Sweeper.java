@@ -4,14 +4,13 @@ package edu.wpi.first.wpilibj.technobots.subsystems;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.technobots.RobotMap;
-import edu.wpi.first.wpilibj.AnalogChannel;
 
 /**
  *
  */
 public class Sweeper extends Subsystem {
 
-    AnalogChannel motor;
+    Victor motor;
 
     // Initialize your subsystem here
     /**
@@ -19,7 +18,7 @@ public class Sweeper extends Subsystem {
      */
     public Sweeper() {
 	super("Sweeper");
-        motor = new AnalogChannel(1);
+        motor = new Victor(1);
     }
 
     public void initDefaultCommand() {
@@ -29,12 +28,11 @@ public class Sweeper extends Subsystem {
 
     public void goForward(){
 
-
-        System.out.println(motor.getValue());
+        motor.set(-.5);
     }
     public void doNothing() {
 
-        
+        motor.set(0);
     }
 }
 

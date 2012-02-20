@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.DigitalIOButton;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import edu.wpi.first.wpilibj.technobots.commands.SweeterOn;
+import edu.wpi.first.wpilibj.technobots.commands.SweeperOn;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -18,7 +18,7 @@ public class OI {
 
     public OI() {
 
-        button1.whenPressed(new SweeterOn());
+        button1.whenPressed(new SweeperOn());
     }
 }
 

@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.technobots.commands.CommandBase;
-import edu.wpi.first.wpilibj.technobots.commands.SweeterOn;
+import edu.wpi.first.wpilibj.technobots.commands.SweeperOn;
 import edu.wpi.first.wpilibj.Compressor;
 
 /**
@@ -37,7 +37,7 @@ public class Technobots extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
-        autonomousCommand = new SweeterOn();
+        autonomousCommand = new SweeperOn();
 
         // Initialize all subsystems
         CommandBase.init();

@@ -5,9 +5,9 @@ package edu.wpi.first.wpilibj.technobots.commands;
  *
  * @author bradmiller
  */
-public class SweeterOn extends CommandBase {
+public class SweeperOn extends CommandBase {
 
-    public SweeterOn() {
+    public SweeperOn() {
         // Use requires() 9here to declare subsystem dependencies
         // eg. requires(chassis);
 
