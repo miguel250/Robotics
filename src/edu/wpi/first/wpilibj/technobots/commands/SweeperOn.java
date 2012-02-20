@@ -3,7 +3,7 @@ package edu.wpi.first.wpilibj.technobots.commands;
 
 /**
  *
- * @author bradmiller
+ * @author Kim
  */
 public class SweeperOn extends CommandBase {
 
