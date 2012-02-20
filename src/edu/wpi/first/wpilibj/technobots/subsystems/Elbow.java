@@ -1,6 +1,7 @@
 package edu.wpi.first.wpilibj.technobots.subsystems;
 
 import edu.wpi.first.wpilibj.AnalogChannel;
+import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
 import edu.wpi.first.wpilibj.technobots.RobotMap;
@@ -19,7 +20,7 @@ public class Elbow extends PIDSubsystem {
 
     AnalogChannel pot;
 
-    Victor motor;
+    SpeedController motor;
 
     // Initialize your subsystem here
     public Elbow() {
