@@ -16,7 +16,7 @@ public class OI {
     Joystick xbox;
     Button button5;
     Shooter shooter;
-
+    
     public OI() {
 
         xbox = new Joystick(1);
@@ -24,7 +24,7 @@ public class OI {
 
         button5.whenPressed(new SweeperOn());
         if (xbox.getRawAxis(3) > 0) {
-           shooter = new Shooter();
+            shooter = new Shooter();
 
 
         }
