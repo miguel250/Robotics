@@ -1,4 +1,7 @@
-
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package edu.wpi.first.wpilibj.technobots.commands;
 
 /**
@@ -19,7 +22,7 @@ public class ShooterDoNothing extends CommandBase {
     }
 
     // Called repeatedly when this Command is scheduled to run
-    protected void execute() {
+    protected void execute(){
         shooter.doNothing();
     }
 
