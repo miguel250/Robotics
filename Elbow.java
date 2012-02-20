@@ -6,6 +6,7 @@
 import edu.wpi.first.wpilibj.AnalogChannel;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
+import edu.wpi.first.wpilibj.technobots.RobotMap;
 
 /**
  *
@@ -18,6 +19,7 @@ public class Elbow extends PIDSubsystem {
     private static final double Kd = 0.0;
 
     public static final double START = 4.0;
+    
     AnalogChannel pot;
     
     Victor motor;
@@ -25,7 +27,11 @@ public class Elbow extends PIDSubsystem {
     // Initialize your subsystem here
     public Elbow() {
         super("Elbow", Kp, Ki, Kd);
-
+        
+        motor = new Victor(RobotMap.elbow);
+        
+        pot   = new AnalogChannel(RobotMap.pot);
+       
         // Use these to get going:
         // setSetpoint() -  Sets where the PID controller should move the system
         //                  to
