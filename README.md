@@ -17,5 +17,5 @@
  9 | Left Stick Down  |
  10| Right Stick Down |
 
-Axis 3 Left  Trigger > 0
+Axis 3 Left  Trigger > 0 
 Axis 3 Right Trigger < 0
