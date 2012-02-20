@@ -6,14 +6,14 @@ package edu.wpi.first.wpilibj.technobots.commands;
 
 /**
  *
- * @author Admin
+ * @author Kim
  */
 public class ShooterDoNothing extends CommandBase {
-    
+
     public ShooterDoNothing() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        
+
         requires(shooter);
     }
 

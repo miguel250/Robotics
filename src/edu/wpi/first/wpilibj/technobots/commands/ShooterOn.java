@@ -3,14 +3,14 @@ package edu.wpi.first.wpilibj.technobots.commands;
 
 /**
  *
- * @author Admin
+ * @author Kim
  */
 public class ShooterOn extends CommandBase {
-    
+
     public ShooterOn() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        
+
         requires(shooter);
     }
 
