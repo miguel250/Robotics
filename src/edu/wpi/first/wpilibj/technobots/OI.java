@@ -3,9 +3,10 @@ package edu.wpi.first.wpilibj.technobots;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.technobots.commands.ReleaseBall;
 import edu.wpi.first.wpilibj.technobots.commands.SetElbowSetPoint;
+import edu.wpi.first.wpilibj.technobots.commands.ShooterOn;
 import edu.wpi.first.wpilibj.technobots.commands.SweeperOn;
-import edu.wpi.first.wpilibj.technobots.subsystems.Shooter;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -15,7 +16,8 @@ public class OI {
 
     Joystick xbox;
     Button button1, button2, button3, button5;
-    Shooter shooter;
+    ShooterOn shooter;
+    ReleaseBall releaseBall;
 
     public OI() {
 
@@ -33,8 +35,13 @@ public class OI {
 
         if (Buffer(xbox.getRawAxis(3)) > 0) {
 
-            shooter = new Shooter();
+            shooter = new ShooterOn();
 
+        }
+
+        if (Buffer(xbox.getRawAxis(3)) < 0) {
+
+            releaseBall = new ReleaseBall();
 
         }
     }
