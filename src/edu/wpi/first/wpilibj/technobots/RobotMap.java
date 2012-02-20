@@ -16,7 +16,7 @@ public class RobotMap {
 
     /**
      * Victors
-     * 
+     *
      * Sweeper is reverse
      * Shooter is reverse
      */
@@ -27,7 +27,8 @@ public class RobotMap {
     //Sensors
     public static final int pot         = 1,
                             rangeFinder = 2;
-    
+
     //Solenoid
-    public static final int ballStopper = 1;
+    public static final int ballStopper1Up   = 1,
+                            ballStopper1Down = 2;
 }
