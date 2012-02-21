@@ -63,7 +63,7 @@ public class OI {
 
     private double Buffer(double n) {
 
-        double buffers = 0.2;
+        double buffers = 0.3;
 
         if (Math.abs(n) < buffers) {
 
