@@ -27,14 +27,14 @@ public class Shooter extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
-        
+
         setDefaultCommand(new ShooterDoNothing());
     }
 
     public void goForward(){
 
-        motor.set(-.8);
-        motor2.set(-.8);
+        motor.set(-1);
+        motor2.set(-1);
     }
 
     public void doNothing() {
