@@ -32,7 +32,7 @@ public class DriveTrain extends Subsystem {
         setDefaultCommand(new DriveWithXbox());
     }
 
-    public void MecanumDrive(double magnitude, double rotation, double direction) {
+    public void MecanumDrive(double magnitude, double direction, double rotation) {
 
          motors.mecanumDrive_Polar(magnitude, direction, rotation);
     }
