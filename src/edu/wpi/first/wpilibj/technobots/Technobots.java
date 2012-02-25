@@ -22,11 +22,11 @@ import edu.wpi.first.wpilibj.Compressor;
  */
 public class Technobots extends IterativeRobot {
 
-    Command autonomousCommand;
+   // Command autonomousCommand;
     Compressor compressor;
 
     public Technobots() {
-        
+
         compressor = new Compressor(3, 1);
 
     }
@@ -37,7 +37,7 @@ public class Technobots extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
-        autonomousCommand = new SweeperOn();
+        //autonomousCommand = new SweeperOn();
 
         // Initialize all subsystems
         CommandBase.init();
@@ -46,7 +46,7 @@ public class Technobots extends IterativeRobot {
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-        autonomousCommand.start();
+       /// autonomousCommand.start();
     }
 
     /**
@@ -61,7 +61,7 @@ public class Technobots extends IterativeRobot {
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
         // this line or comment it out.
-        autonomousCommand.cancel();
+        //autonomousCommand.cancel();
     }
 
     /**
