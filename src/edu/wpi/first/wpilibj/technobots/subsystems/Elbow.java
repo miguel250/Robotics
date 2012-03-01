@@ -12,11 +12,11 @@ import edu.wpi.first.wpilibj.technobots.RobotMap;
  */
 public class Elbow extends PIDSubsystem {
 
-    private static final double Kp = -2;
+    private static final double Kp = .2;
     private static final double Ki = 0.0;
     private static final double Kd = 0.0;
 
-    public static final double START = 4.0;
+    public static final double START = 0.57;
 
     AnalogChannel pot;
 
@@ -43,6 +43,7 @@ public class Elbow extends PIDSubsystem {
         // Return your input value for the PID loop
         // e.g. a sensor, like a potentiometer:
         // yourPot.getAverageVoltage() / kYourMaxVoltage;
+
         return pot.getVoltage();
     }
 
