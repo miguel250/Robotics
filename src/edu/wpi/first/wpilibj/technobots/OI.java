@@ -29,9 +29,7 @@ public class OI {
         button6 = new JoystickButton(xbox, 6);
         button8 = new JoystickButton(xbox, 8);
 
-        button1.whileHeld(new SetElbowSetPoint(0.5));
-        button2.whileHeld(new SetElbowSetPoint(1.0));
-        button3.whileHeld(new SetElbowSetPoint(0));
+        button1.whileHeld(new SetElbowSetPoint(0.04));
         button5.whileHeld(new ShooterOn());
         button6.whileHeld(new SweeperOn());
 
