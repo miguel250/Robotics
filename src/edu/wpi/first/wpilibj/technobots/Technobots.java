@@ -27,7 +27,7 @@ public class Technobots extends IterativeRobot {
 
     public Technobots() {
 
-        compressor = new Compressor(3, 1);
+        compressor = new Compressor(1, 1);
 
     }
 
