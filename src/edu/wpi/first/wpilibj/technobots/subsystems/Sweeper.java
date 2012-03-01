@@ -26,13 +26,13 @@ public class Sweeper extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
-        
+
         setDefaultCommand(new SweeperDoNothing());
     }
 
     public void goForward(){
 
-        motor.set(-.5);
+        motor.set(-1);
     }
     public void doNothing() {
 
