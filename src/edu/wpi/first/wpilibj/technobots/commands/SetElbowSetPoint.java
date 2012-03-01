@@ -32,8 +32,8 @@ public class SetElbowSetPoint extends CommandBase {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        
-        return Math.abs(elbow.getPosition() - setPoint) < .08;
+
+        return Math.abs(elbow.getPosition() - setPoint) < .8;
     }
 
     // Called once after isFinished returns true
