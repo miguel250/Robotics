@@ -41,7 +41,7 @@ public class Elbow extends PIDSubsystem {
         // e.g. a sensor, like a potentiometer:
         // yourPot.getAverageVoltage() / kYourMaxVoltage;
 
-        return pot.getAverageVoltage();
+        return pot.getAverageVoltage() / .2;
     }
 
     protected void usePIDOutput(double output) {
