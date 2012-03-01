@@ -33,13 +33,13 @@ public class BallStopper extends Subsystem {
 
     public void Stop() {
 
-        down.set(false);
-        up.set(true);
+        down.set(true);
+        up.set(false);
 
     }
 
     public void Release() {
-        up.set(false);
-        down.set(true);
+        up.set(true);
+        down.set(false);
     }
 }
