@@ -15,11 +15,8 @@ public class Elbow extends PIDSubsystem {
     private static final double Kp = .2;
     private static final double Ki = 0.0;
     private static final double Kd = 0.0;
-
     public static final double START = 0.57;
-
     AnalogChannel pot;
-
     SpeedController motor;
 
     // Initialize your subsystem here
@@ -28,7 +25,7 @@ public class Elbow extends PIDSubsystem {
 
         motor = new Victor(RobotMap.elbow);
 
-        pot   = new AnalogChannel(RobotMap.pot);
+        pot = new AnalogChannel(RobotMap.pot);
 
         setSetpoint(START);
         enable();
@@ -49,6 +46,12 @@ public class Elbow extends PIDSubsystem {
 
     protected void usePIDOutput(double output) {
 
+        if (output >= 1.0) {
+            output = 1;
+        }
+        if (output <= -1.0) {
+            output = -1;
+        }
         motor.set(output);
     }
 }
