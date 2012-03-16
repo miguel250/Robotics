@@ -30,7 +30,9 @@ public class OI {
         button8 = new JoystickButton(xbox, 8);
 
         button1.whileHeld(new SetElbowSetPoint(0.04));
-        button5.whileHeld(new ShooterOn());
+        button5.whileHeld(new ShooterOn(-1));
+        button2.whileHeld(new ShooterOn(-.6));
+        button3.whileHeld(new ShooterOn(-.2));
         button6.whileHeld(new SweeperOn());
 
         button8.whileHeld(new ReleaseBall());

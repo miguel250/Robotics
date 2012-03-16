@@ -1,19 +1,26 @@
-
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package edu.wpi.first.wpilibj.technobots.commands;
+
+import edu.wpi.first.wpilibj.technobots.KinectGestures;
 
 /**
  *
- * @author Kim
+ * @author miguel
  */
-public class ShooterOn extends CommandBase {
-    double speed;
+public class ReleaseBallWithKinect extends CommandBase {
 
-    public ShooterOn(double speed) {
+    KinectGestures kinect;
+
+    public ReleaseBallWithKinect() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 
-        requires(shooter);
-        this.speed = speed;
+        requires(ballstopper);
+
+        kinect = new KinectGestures();
     }
 
     // Called just before this Command runs the first time
@@ -22,7 +29,13 @@ public class ShooterOn extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        shooter.goForward(this.speed);
+
+        boolean[] button = kinect.Kinectleg();
+
+        if(button[0]){
+
+            ballstopper.Release();
+        }
     }
 
     // Make this return true when this Command no longer needs to run execute()

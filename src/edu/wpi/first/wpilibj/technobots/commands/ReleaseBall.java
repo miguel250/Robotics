@@ -15,7 +15,7 @@ public class ReleaseBall extends CommandBase {
         // eg. requires(chassis);
 
         requires(ballstopper);
-        this.setTimeout(.8);
+        //this.setTimeout(6);
     }
 
     // Called just before this Command runs the first time
@@ -30,7 +30,7 @@ public class ReleaseBall extends CommandBase {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return this.isTimedOut();
+        return false;
     }
 
     // Called once after isFinished returns true

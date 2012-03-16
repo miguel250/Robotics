@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.technobots.commands.CommandBase;
 import edu.wpi.first.wpilibj.technobots.commands.SweeperOn;
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.technobots.commands.NormalAutonomous;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -22,7 +23,7 @@ import edu.wpi.first.wpilibj.Compressor;
  */
 public class Technobots extends IterativeRobot {
 
-   // Command autonomousCommand;
+    Command autonomousCommand;
     Compressor compressor;
 
     public Technobots() {
@@ -37,7 +38,7 @@ public class Technobots extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
-        //autonomousCommand = new SweeperOn();
+        autonomousCommand = new NormalAutonomous();
 
         // Initialize all subsystems
         CommandBase.init();
@@ -46,7 +47,7 @@ public class Technobots extends IterativeRobot {
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-       /// autonomousCommand.start();
+        autonomousCommand.start();
     }
 
     /**

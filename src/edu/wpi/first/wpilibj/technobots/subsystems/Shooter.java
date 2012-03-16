@@ -31,10 +31,10 @@ public class Shooter extends Subsystem {
         setDefaultCommand(new ShooterDoNothing());
     }
 
-    public void goForward(){
+    public void goForward(double speed){
 
-        motor.set(-1);
-        motor2.set(-1);
+        motor.set(speed);
+        motor2.set(speed);
     }
 
     public void doNothing() {
