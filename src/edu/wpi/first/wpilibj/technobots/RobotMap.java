@@ -10,8 +10,8 @@ public class RobotMap {
 
     //Jaguars
     public static final int lowerRight = 1,
-                            lowerLeft  = 2,
-                            upperRight = 3,
+                            lowerLeft  = 3,
+                            upperRight = 2,
                             upperLeft  = 4;
 
     /**

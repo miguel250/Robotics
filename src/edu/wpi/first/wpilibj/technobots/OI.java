@@ -45,26 +45,12 @@ public class OI {
 
     public double getMagnitude() {
 
-        double y = Buffer(xbox.getY());
-        double x = Buffer(xbox.getX());
-
-        double magnitude = Math.sqrt(MathUtils.pow(x, 2) + MathUtils.pow(y, 2));
-
-        return magnitude;
+        return this.Buffer(this.xbox.getMagnitude());
     }
 
     public double getDirection() {
 
-        double y = Buffer(xbox.getY());
-        double x = Buffer(xbox.getX());
-
-        double direction = Math.toDegrees(MathUtils.atan2(x, y));
-
-        if (direction < 180) {
-
-            direction = 0;
-        }
-        return direction;
+       return this.Buffer(this.xbox.getDirectionDegrees());
     }
 
     public double getRotation() {
