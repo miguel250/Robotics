@@ -22,13 +22,10 @@ public class RobotMap {
      */
     public static final int shooterRight = 5,
                             shooterLeft  = 6,
-                            sweeper      = 7,
-                            elbow        = 8;
-    //Sensors
-    public static final int pot         = 1,
-                            rangeFinder = 2;
+                            sweeper      = 7;
 
     //Solenoid
-    public static final int ballStopper1Up   = 1,
-                            ballStopper1Down = 2;
+    public static final int holdDisc  = 1,
+                            moveGrabber = 2,
+                            grabber = 3;
 }

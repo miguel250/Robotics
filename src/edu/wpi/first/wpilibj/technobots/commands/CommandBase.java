@@ -17,9 +17,9 @@ public abstract class CommandBase extends Command {
     // Create a single static instance of all of your subsystems
     public static Sweeper     sweeper     = new Sweeper();
     public static Shooter     shooter     = new Shooter();
-    public static Elbow       elbow       = new Elbow();
     public static DriveTrain  drivetrain  = new DriveTrain();
-    public static BallStopper ballstopper = new BallStopper();
+    public static DiscStopper discStopper = new DiscStopper();
+    public static Climber   climb = new Climber();
 
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
@@ -30,7 +30,7 @@ public abstract class CommandBase extends Command {
         oi = new OI();
 
         // Show what command your subsystem is running on the SmartDashboard
-        SmartDashboard.putData(sweeper);
+        //SmartDashboard.putData(sweeper);
     }
 
     public CommandBase(String name) {

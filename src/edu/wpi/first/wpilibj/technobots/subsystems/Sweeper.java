@@ -32,7 +32,7 @@ public class Sweeper extends Subsystem {
 
     public void goForward(){
 
-        motor.set(-1);
+        motor.set(1);
     }
     public void doNothing() {
 

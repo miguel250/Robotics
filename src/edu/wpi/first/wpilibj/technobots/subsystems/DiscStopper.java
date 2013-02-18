@@ -7,39 +7,33 @@ package edu.wpi.first.wpilibj.technobots.subsystems;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.technobots.RobotMap;
-import edu.wpi.first.wpilibj.technobots.commands.StopBall;
+import edu.wpi.first.wpilibj.technobots.commands.StopDisc;
 
 /**
  *
  * @author miguel
  */
-public class BallStopper extends Subsystem {
+public class DiscStopper extends Subsystem {
 
-    Solenoid up;
-    Solenoid down;
+    Solenoid holdDisc;
 
-    public BallStopper() {
+    public DiscStopper() {
 
-        super("BallStopper");
-
-        up   = new Solenoid(RobotMap.ballStopper1Up);
-        down = new Solenoid(RobotMap.ballStopper1Down);
+        super("DiscStopper");
+        holdDisc   = new Solenoid(RobotMap.holdDisc);
     }
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-        setDefaultCommand(new StopBall());
+        setDefaultCommand(new StopDisc());
     }
 
     public void Stop() {
-
-        down.set(true);
-        up.set(false);
+        holdDisc.set(false);
 
     }
 
     public void Release() {
-        up.set(true);
-        down.set(false);
+        holdDisc.set(true);
     }
 }

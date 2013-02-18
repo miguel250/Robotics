@@ -15,7 +15,7 @@ public class OI {
 
     Joystick xbox;
     Button button1, button2, button3, button5, button6, button8;
-    ReleaseBall releaseBall;
+    ReleaseDisc releaseBall;
     KinectStick leftArm;
     KinectStick rightArm;
 
@@ -29,13 +29,11 @@ public class OI {
         button6 = new JoystickButton(xbox, 6);
         button8 = new JoystickButton(xbox, 8);
 
-        button1.whileHeld(new SetElbowSetPoint(0.04));
         button5.whileHeld(new ShooterOn(-1));
-        button2.whileHeld(new ShooterOn(-.6));
-        button3.whileHeld(new ShooterOn(-.2));
         button6.whileHeld(new SweeperOn());
-
-        button8.whileHeld(new ReleaseBall());
+        
+        button2.whileHeld(new ClimbUp());
+        button1.whileHeld(new ReleaseDisc());
 
         leftArm = new KinectStick(1);
         rightArm = new KinectStick(2);

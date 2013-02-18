@@ -4,23 +4,18 @@
  */
 package edu.wpi.first.wpilibj.technobots.commands;
 
-import edu.wpi.first.wpilibj.technobots.KinectGestures;
-
 /**
  *
  * @author miguel
  */
-public class ReleaseBallWithKinect extends CommandBase {
+public class ReleaseDisc extends CommandBase {
 
-    KinectGestures kinect;
-
-    public ReleaseBallWithKinect() {
+    public ReleaseDisc() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 
-        requires(ballstopper);
-
-        kinect = new KinectGestures();
+        requires(discStopper);
+        //this.setTimeout(6);
     }
 
     // Called just before this Command runs the first time
@@ -30,12 +25,7 @@ public class ReleaseBallWithKinect extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
 
-        boolean[] button = kinect.Kinectleg();
-
-        if(button[0]){
-
-            ballstopper.Release();
-        }
+        discStopper.Release();
     }
 
     // Make this return true when this Command no longer needs to run execute()

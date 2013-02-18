@@ -4,18 +4,19 @@
  */
 package edu.wpi.first.wpilibj.technobots.commands;
 
+import edu.wpi.first.wpilibj.technobots.subsystems.DiscStopper;
+
 /**
  *
  * @author miguel
  */
-public class ReleaseBall extends CommandBase {
+public class StopDisc extends CommandBase {
 
-    public ReleaseBall() {
+    public StopDisc() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 
-        requires(ballstopper);
-        //this.setTimeout(6);
+        requires(discStopper);
     }
 
     // Called just before this Command runs the first time
@@ -24,8 +25,7 @@ public class ReleaseBall extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-
-        ballstopper.Release();
+        discStopper.Stop();
     }
 
     // Make this return true when this Command no longer needs to run execute()

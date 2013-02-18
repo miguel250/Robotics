@@ -16,8 +16,8 @@ public class NormalAutonomous extends CommandGroup {
 
         //addSequential(new StopBall());
         addParallel(new ShooterOn(-.6));
-        addSequential(new ReleaseBall());
-        addSequential(new StopBall());
+        addSequential(new ReleaseDisc());
+        addSequential(new StopDisc());
 
 
     }
