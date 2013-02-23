@@ -9,14 +9,18 @@ package edu.wpi.first.wpilibj.technobots;
 public class RobotMap {
 
     //Jaguars
-    public static final int lowerRight = 1,
-                            lowerLeft  = 3,
+    public static final int lowerRight = 3,
+                            lowerLeft  = 4,
                             upperRight = 2,
-                            upperLeft  = 4;
+                            upperLeft  = 1;
 
     /**
      * Victors
      *
+     * lowerRight = 3,
+                            lowerLeft  = 1,
+                            upperRight = 2,
+                            upperLeft  = 4;
      * Sweeper is reverse
      * Shooter is reverse
      */

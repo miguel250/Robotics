@@ -7,7 +7,7 @@ package edu.wpi.first.wpilibj.technobots.subsystems;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.technobots.RobotMap;
-import edu.wpi.first.wpilibj.technobots.commands.ClimbDown;
+import edu.wpi.first.wpilibj.technobots.commands.ClimbDoNothing;
 
 /**
  *
@@ -27,7 +27,7 @@ public class Climber extends Subsystem {
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-        setDefaultCommand(new ClimbDown());
+        setDefaultCommand(new ClimbDoNothing());
     }
 
     public void Up() {
@@ -37,7 +37,11 @@ public class Climber extends Subsystem {
     }
 
     public void Down() {
-        side.set(false);
         climb.set(false);
+    }
+    
+    public void Reset(){
+        climb.set(false);
+        side.set(false);
     }
 }

@@ -32,7 +32,8 @@ public class OI {
         button5.whileHeld(new ShooterOn(-1));
         button6.whileHeld(new SweeperOn());
         
-        button2.whileHeld(new ClimbUp());
+        button2.whenPressed(new ClimbUp());
+        button3.whenPressed(new ClimbDown());
         button1.whileHeld(new ReleaseDisc());
 
         leftArm = new KinectStick(1);

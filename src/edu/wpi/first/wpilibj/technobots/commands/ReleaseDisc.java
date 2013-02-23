@@ -15,7 +15,7 @@ public class ReleaseDisc extends CommandBase {
         // eg. requires(chassis);
 
         requires(discStopper);
-        //this.setTimeout(6);
+        this.setTimeout(.6);
     }
 
     // Called just before this Command runs the first time
@@ -30,7 +30,7 @@ public class ReleaseDisc extends CommandBase {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return this.isTimedOut();
     }
 
     // Called once after isFinished returns true

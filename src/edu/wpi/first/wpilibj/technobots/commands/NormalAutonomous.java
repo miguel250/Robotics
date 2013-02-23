@@ -14,11 +14,25 @@ public class NormalAutonomous extends CommandGroup {
 
     public NormalAutonomous() {
 
-        //addSequential(new StopBall());
-        addParallel(new ShooterOn(-.6));
+        //Release first disc;
+        addParallel(new ShooterOn(-1));
+        addSequential(new StopDisc());
+        addSequential(new SweeperDoNothing());
+        addSequential(new SweeperOn());
+        addSequential(new SweeperDoNothing());
         addSequential(new ReleaseDisc());
         addSequential(new StopDisc());
-
-
+        
+        //Release second disc
+        addSequential(new SweeperOn());
+        addSequential(new SweeperDoNothing());
+        addSequential(new ReleaseDisc());
+        addSequential(new StopDisc());
+        
+        //Release last disc;
+        addSequential(new SweeperOn());
+        addSequential(new SweeperDoNothing());
+        addSequential(new ReleaseDisc());
+        addSequential(new StopDisc());
     }
 }
